@@ -1,9 +1,8 @@
-# import importlib
 import os
 from abc import ABC, abstractmethod
-from calend import calend_main
-from Addressbook import start as start_ab
-from notebook.nb_main import NoteManager
+from calendar_app import calend_main
+from addressbook import start as start_ab
+from notebook import NoteManager
 from file_sorter import start as start_fs
 from exchanger import ex_main
 
@@ -43,9 +42,9 @@ class Menu:
     def __init__(self, user_interface):
         self.choices = {
             1: ("file_sorter", start_fs),
-            2: ("Addressbook", start_ab),
-            3: ("notebook.nb_main", "nb_main"),
-            4: ("calend", calend_main),
+            2: ("addressbook", start_ab),
+            3: ("notebook", NoteManager),
+            4: ("calendar_app", calend_main),
             5: ("exchanger", ex_main)
         }
 
